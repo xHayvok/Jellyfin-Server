@@ -16,14 +16,17 @@ This server is effectively just a NAS, but also does any downloading and file or
 ## CasaOS
 CasaOS is the main interface I used for initial setup, as well as maintenance.
 ### Added repositories 
-big bear or whatever
-cools apps
+[Big Bear CasaOS App Store](https://github.com/bigbeartechworld/big-bear-casaos): This repository 
+[CasaOS Coolstore](https://github.com/WisdomSky/CasaOS-Coolstore)
 ### Docker composes
 list of composes i added manually due to gluetun (link if possible)
 
 ## Jellyfin Plugins
 a list of plugins currently deployed in Jellyfin
+Stock Plugins: AudioDB, MusicBrainz, OMDb, Studio Images, TMDb
+Added Plugins: Fanart.TV, Into Skipper, Merge Versions, Playback Reporting, Reports, SkinManager, TMDb Box Sets, TVmaze, TheTVBD, Webhook
 ### Repositories 
+[Jellyfin Plugin Manifest](https://github.com/danieladov/JellyfinPluginManifest), [Jellyfin Webhook Plugin](https://github.com/jellyfin/jellyfin-plugin-webhook), [Intro Skipper (beta)](https://github.com/jumoog/intro-skipper)
 
 ## Useful links
 links used
