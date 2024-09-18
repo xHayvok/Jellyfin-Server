@@ -1,3 +1,4 @@
+``` yaml
 services:
   lidarr:
     icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Lidarr/icon.png
@@ -12,5 +13,5 @@ services:
     volumes:
       - /DATA/AppData/lidarr/config:/config
       - /mnt/media/music:/data
-	  
+``` 
 [source](https://hotio.dev/containers/lidarr/)

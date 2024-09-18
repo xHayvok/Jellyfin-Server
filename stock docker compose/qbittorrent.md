@@ -1,3 +1,4 @@
+``` yaml
 services:
   qbittorrent:
     icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/qBittorrent/icon.png
@@ -12,5 +13,5 @@ services:
     volumes:
       - /DATA/AppData/qbittorrent/config:/config
       - /mnt/downloads:/data
-	  
+```
 [source](https://hotio.dev/containers/qbittorrent/)

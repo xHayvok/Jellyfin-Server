@@ -1,3 +1,4 @@
+``` yaml
 services:
   readarr:
     icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Readarr/icon.png
@@ -12,5 +13,5 @@ services:
     volumes:
       - /DATA/AppData/readarr/config:/config
       - /mnt/media/books:/data
-	  
+```
 [source](https://hotio.dev/containers/readarr/)

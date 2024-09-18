@@ -1,3 +1,4 @@
+``` yaml
 services:
   flaresolverr:
     icon: https://avatars.githubusercontent.com/u/10577978
@@ -13,6 +14,5 @@ services:
 	  - PROMETHEUS_PORT=8191
 	  - PORT=8191
     restart: unless-stopped 
-
-
+```
 [source](https://hub.docker.com/r/flaresolverr/flaresolverr)

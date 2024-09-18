@@ -1,3 +1,4 @@
+``` yaml
 services:
   bazarr:
     icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Bazarr/icon.png
@@ -12,5 +13,5 @@ services:
     volumes:
       - /DATA/AppData/bazarr/config:/config
       - /mnt/media/subtitles:/data
-	  
+```
 [source](https://hotio.dev/containers/bazarr/)

@@ -1,3 +1,4 @@
+``` yaml
 services:
   radarr:
     icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Radarr/icon.png
@@ -12,5 +13,5 @@ services:
     volumes:
       - /DATA/AppData/radarr/config:/config
       - /mnt/media/movies:/data
-	  
+```
 [source](https://hotio.dev/containers/radarr/)

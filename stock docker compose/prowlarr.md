@@ -1,3 +1,4 @@
+``` yaml
 services:
   prowlarr:
     icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Prowlarr/icon.png
@@ -11,5 +12,5 @@ services:
     restart: unless-stopped 
     volumes:
       - /DATA/AppData/prowlarr/config:/config
-	  
+```
 [source](https://hotio.dev/containers/prowlarr/)

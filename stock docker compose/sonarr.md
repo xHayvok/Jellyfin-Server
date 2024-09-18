@@ -1,3 +1,4 @@
+``` yaml
 services:
   sonarr:
     icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Sonarr/icon.png
@@ -12,5 +13,5 @@ services:
     volumes:
       - /DATA/AppData/sonarr/config:/config
       - /mnt/media/shows:/data
-	  
+```
 [source](https://hotio.dev/containers/sonarr/)
