@@ -1,0 +1,44 @@
+name: fascinating_nikhil
+services:
+  radarr:
+    cpu_shares: 90
+    command: []
+    deploy:
+      resources:
+        limits:
+          memory: 7857M
+    environment:
+      - PGID=1000
+      - PUID=1000
+      - TZ=US/Central
+      - UMASK=002
+    image: ghcr.io/hotio/radarr:latest
+    labels:
+      icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Radarr/icon.png
+    privileged: true
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData//config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/radarr/data
+        target: /data
+    ports: []
+    devices: []
+    cap_add: []
+    network_mode: container:gluetun
+    container_name: ""
+    hostname: ""
+x-casaos:
+  author: self
+  category: self
+  hostname: ""
+  icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Radarr/icon.png
+  index: /
+  is_uncontrolled: false
+  port_map: "7878"
+  scheme: http
+  store_app_id: fascinating_nikhil
+  title:
+    custom: Radarr

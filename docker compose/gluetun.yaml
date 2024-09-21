@@ -1,0 +1,63 @@
+name: dreamy_fredrik
+services:
+  gluetun:
+    cap_add:
+      - NET_ADMIN
+    cpu_shares: 90
+    command: []
+    container_name: gluetun
+    deploy:
+      resources:
+        limits:
+          memory: 7857M
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    environment:
+      - OPENVPN_PASSWORD=YD5QZivUwKFGmMgkZLL3ie5u
+      - OPENVPN_USER=TfCK3XVFMKN4Hk1X1Q2UzuYz
+      - SERVER_CATEGORIES=P2P
+      - SERVER_COUNTRIES=United States
+      - TZ=US/Central
+      - UPDATER_PERIOD=24h
+      - VPN_SERVICE_PROVIDER=nordvpn
+      - VPN_TYPE=openvpn
+    hostname: gluetun
+    image: qmcgaw/gluetun:latest
+    ports:
+      - target: 8888
+        published: "8888"
+        protocol: tcp
+      - target: 8388
+        published: "8388"
+        protocol: tcp
+      - target: 8388
+        published: "8388"
+        protocol: udp
+      - target: 8080
+        published: "8080"
+        protocol: tcp
+      - target: 7878
+        published: "7878"
+        protocol: tcp
+      - target: 8989
+        published: "8989"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/gluetun
+        target: /gluetun
+    network_mode: bridge
+    privileged: false
+x-casaos:
+  author: self
+  category: self
+  hostname: ""
+  icon: ""
+  index: /
+  is_uncontrolled: false
+  port_map: ""
+  scheme: http
+  store_app_id: dreamy_fredrik
+  title:
+    custom: gluetun

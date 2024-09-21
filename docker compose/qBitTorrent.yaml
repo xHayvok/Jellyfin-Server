@@ -1,0 +1,46 @@
+name: fascinating_romain
+services:
+  qbittorrent:
+    cpu_shares: 90
+    command: []
+    deploy:
+      resources:
+        limits:
+          memory: 7857M
+    environment:
+      - PGID=1000
+      - PUID=1000
+      - TZ=US/Central
+      - UMASK=002
+      - VPN_ENABLED=no
+      - WEBUI_PORTS=8080/tcp,8080/udp
+    image: ghcr.io/hotio/qbittorrent:latest
+    labels:
+      icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/qBittorrent/icon.png
+    privileged: true
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/config
+        target: /config
+      - type: bind
+        source: /DATA/AppData/qbittorrent/downloads
+        target: /dowloads
+    ports: []
+    devices: []
+    cap_add: []
+    network_mode: container:gluetun
+    container_name: ""
+    hostname: ""
+x-casaos:
+  author: self
+  category: self
+  hostname: ""
+  icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/qBittorrent/icon.png
+  index: /
+  is_uncontrolled: false
+  port_map: "8080"
+  scheme: http
+  store_app_id: fascinating_romain
+  title:
+    custom: qBitTorrent
