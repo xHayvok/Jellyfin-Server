@@ -42,6 +42,21 @@ services:
       - target: 8989
         published: "8989"
         protocol: tcp
+      - target: 9696
+        published: "9696"
+        protocol: tcp
+      - target: 8686
+        published: "8686"
+        protocol: tcp
+      - target: 8787
+        published: "8787"
+        protocol: tcp
+      - target: 6767
+        published: "6767"
+        protocol: tcp
+      - target: 8191
+        published: "8191"
+        protocol: tcp
     restart: unless-stopped
     volumes:
       - type: bind

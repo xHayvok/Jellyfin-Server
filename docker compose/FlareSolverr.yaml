@@ -1,6 +1,6 @@
-name: flaresolverr
+name: gracious_maxime
 services:
-  app:
+  flaresolverr:
     cpu_shares: 90
     command: []
     deploy:
@@ -13,52 +13,29 @@ services:
       - LOG_LEVEL=info
       - PORT=8191
       - PROMETHEUS_ENABLED=false
-      - PROMETHEUS_PORT=8192
+      - PROMETHEUS_PORT=8191
       - TZ=US/Central
-    image: flaresolverr/flaresolverr:latest
+    image: ghcr.io/flaresolverr/flaresolverr:latest
     labels:
       icon: https://avatars.githubusercontent.com/u/10577978
+    privileged: true
     restart: unless-stopped
     ports: []
     volumes: []
     devices: []
     cap_add: []
-    networks:
-      - default
-    privileged: false
+    network_mode: container:gluetun
     container_name: ""
     hostname: ""
-networks:
-  default:
-    name: flaresolverr_default
 x-casaos:
-  architectures:
-    - amd64
-    - arm
-    - arm64
-  author: WisdomSky
-  category: Coolstore
-  description:
-    en_us: FlareSolverr is a proxy server to bypass Cloudflare protection.
-      FlareSolverr starts a proxy server, and it waits for user requests in an
-      idle state using few resources. When some request arrives, it uses
-      Selenium with the undetected-chromedriver to create a web browser
-      (Chrome). It opens the URL with user parameters and waits until the
-      Cloudflare challenge is solved (or timeout). The HTML code and the cookies
-      are sent back to the user, and those cookies can be used to bypass
-      Cloudflare using other HTTP clients.
-  developer: FlareSolverr
+  author: self
+  category: self
   hostname: ""
   icon: https://avatars.githubusercontent.com/u/10577978
   index: /
   is_uncontrolled: false
-  main: app
-  port_map: ""
+  port_map: "8191"
   scheme: http
-  store_app_id: flaresolverr
-  tagline:
-    en_us: FlareSolverr is a proxy server to bypass Cloudflare protection.
-  thumbnail: https://avatars.githubusercontent.com/u/10577978
+  store_app_id: gracious_maxime
   title:
-    custom: ""
-    en_us: FlareSolverr
+    custom: FlareSolverr

@@ -1,4 +1,4 @@
-name: fascinating_nikhil
+name: practical_grace
 services:
   radarr:
     cpu_shares: 90
@@ -19,11 +19,14 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /DATA/AppData//config
+        source: /DATA/AppData/radarr/config
         target: /config
       - type: bind
-        source: /DATA/AppData/radarr/data
-        target: /data
+        source: /mnt/media/movies
+        target: /mnt/media/movies
+      - type: bind
+        source: /mnt/downloads/downloads
+        target: /mnt/downloads/downloads
     ports: []
     devices: []
     cap_add: []
@@ -39,6 +42,6 @@ x-casaos:
   is_uncontrolled: false
   port_map: "7878"
   scheme: http
-  store_app_id: fascinating_nikhil
+  store_app_id: practical_grace
   title:
     custom: Radarr
