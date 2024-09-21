@@ -1,4 +1,4 @@
-name: fascinating_romain
+name: imaginative_hrant
 services:
   qbittorrent:
     cpu_shares: 90
@@ -6,14 +6,12 @@ services:
     deploy:
       resources:
         limits:
-          memory: 7857M
+          memory: 11877M
     environment:
       - PGID=1000
       - PUID=1000
       - TZ=US/Central
       - UMASK=002
-      - VPN_ENABLED=no
-      - WEBUI_PORTS=8080/tcp,8080/udp
     image: ghcr.io/hotio/qbittorrent:latest
     labels:
       icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/qBittorrent/icon.png
@@ -21,11 +19,11 @@ services:
     restart: unless-stopped
     volumes:
       - type: bind
-        source: /DATA/AppData/config
+        source: /DATA/AppData/qbittorrent/config
         target: /config
       - type: bind
-        source: /DATA/AppData/qbittorrent/downloads
-        target: /dowloads
+        source: /mnt/downloads/downloads
+        target: /mnt/downloads/downloads
     ports: []
     devices: []
     cap_add: []
@@ -41,6 +39,6 @@ x-casaos:
   is_uncontrolled: false
   port_map: "8080"
   scheme: http
-  store_app_id: fascinating_romain
+  store_app_id: imaginative_hrant
   title:
     custom: qBitTorrent
