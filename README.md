@@ -139,6 +139,7 @@ a list of plugins currently deployed in Jellyfin
 - [Software RAID Walkthrough](https://wiki.debian.org/SoftwareRAID)
 - [Add nvidia runtime to docker runtimes](https://stackoverflow.com/questions/59008295/add-nvidia-runtime-to-docker-runtimes)
 - [NVIDIA Drivers for Debian 12 - Step by Step](https://www.reddit.com/r/linux4noobs/comments/18n34c3/nvidia_drivers_for_debian_12_step_by_step/)
+- [Fix NVIDIA drivers after linux update](https://forums.developer.nvidia.com/t/nvidia-smi-has-failed-because-it-couldnt-communicate-with-the-nvidia-driver-make-sure-that-the-latest-nvidia-driver-is-installed-and-running/197141)
 - [Video Encode and Decode GPU Support Matrix](https://developer.nvidia.com/video-encode-and-decode-gpu-support-matrix-new)
 - [How to mount smb share on ubuntu 18.04](https://askubuntu.com/questions/1050460/how-to-mount-smb-share-on-ubuntu-18-04)
 - https://ipleak.net
