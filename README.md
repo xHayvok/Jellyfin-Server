@@ -149,3 +149,4 @@ a list of plugins currently deployed in Jellyfin
 - Adding drives to linux
     - [How to Mount and Access Windows NTFS Drives in Linux](https://www.makeuseof.com/mount-ntfs-windows-drives-in-linux/)
     - [What is the equivalent for switching drives in terminal on Linux?](https://askubuntu.com/questions/100568/what-is-the-equivalent-for-switching-drives-in-terminal-on-linux)
+    - [Add network drive to fstab](https://askubuntu.com/questions/157128/proper-fstab-entry-to-mount-a-samba-share-on-boot)
